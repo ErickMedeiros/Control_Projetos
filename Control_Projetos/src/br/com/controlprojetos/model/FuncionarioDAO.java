@@ -1,50 +1,49 @@
-package br.com.controlprojetos.modelos;
+package br.com.controlprojetos.model;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.com.controlprojetos.beans.Grupo;
-import br.com.controlprojetos.beans.Projeto;
+import br.com.controlprojetos.beans.Funcionario;
 import br.com.controlprojetos.jpa.EntityManagerUtil;
 import br.com.controlprojetos.util.UtilErros;
 import br.com.controlprojetos.util.UtilMensagens;
 
-public class ProjetoDAO {
-	
+public class FuncionarioDAO {
+
 	private EntityManager em;
 	
-	public ProjetoDAO(){
+	public FuncionarioDAO(){
 		em = EntityManagerUtil.getEntityManager();
 	}
 	
-	public List<Projeto> listarTodos(){
-		return em.createQuery("from Projeto order by id").getResultList();
+	public List<Funcionario> listarTodos(){
+		return em.createQuery("from Funcionario order by nome").getResultList();
 	}
-
-	public boolean gravar(Projeto obj){
-		try {
+	
+	public boolean gravar (Funcionario obj){
+		try{
 			em.getTransaction().begin();
 			if (obj.getId() == null){
 				em.persist(obj);
-			} else {
+			} else{
 				em.merge(obj);
 			}
 			em.getTransaction().commit();
-			UtilMensagens.mensagemInformacao("Objeto persistido com sucesso!");
+			UtilMensagens.mensagemInformacao("Dados gravados com sucesso!");
 			return true;
-		} catch (Exception e){
-			if (em.getTransaction().isActive() == false){
+		} catch (Exception e) {
+			if(em.getTransaction().isActive()== false){
 				em.getTransaction().begin();
 			}
 			em.getTransaction().rollback();
-			UtilMensagens.mensagemErro("Erro ao persistir objeto: "+
-			                                  UtilErros.getMensagemErro(e));
+			UtilMensagens.mensagemErro("Erro ao gravar dados no banco"+
+			UtilErros.getMensagemErro(e));
 			return false;
 		}
 	}
-	
-	public boolean excluir(Projeto obj){
+
+	public boolean excluir(Funcionario obj){
 		try {
 			em.getTransaction().begin();
 			em.remove(obj);
@@ -62,15 +61,8 @@ public class ProjetoDAO {
 		}
 	}	
 	
-	public Projeto localizar(Integer id){
-		return em.find(Projeto.class, id);
-	}
-	
-	public void roolback(){
-		if (em.getTransaction().isActive() == false){
-			em.getTransaction().begin();
-		}
-		em.getTransaction().rollback();
+	public Funcionario localizar (Integer id){
+		return em.find(Funcionario.class, id);
 	}
 	
 	public EntityManager getEm() {
@@ -80,5 +72,6 @@ public class ProjetoDAO {
 	public void setEm(EntityManager em) {
 		this.em = em;
 	}
-
+	
+	
 }

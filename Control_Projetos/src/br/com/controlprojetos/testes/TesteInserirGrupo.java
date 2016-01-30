@@ -2,8 +2,8 @@ package br.com.controlprojetos.testes;
 
 import javax.persistence.EntityManager;
 
-import br.com.projectjpa.beans.Grupo;
-import br.com.projectjpa.jpa.EntityManagerUtil;
+import br.com.controlprojetos.beans.Grupo;
+import br.com.controlprojetos.jpa.EntityManagerUtil;
 
 public class TesteInserirGrupo {
 

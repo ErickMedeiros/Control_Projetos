@@ -6,14 +6,14 @@ import java.util.Calendar;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import br.com.projectjpa.beans.Funcionario;
-import br.com.projectjpa.beans.Projeto;
-import br.com.projectjpa.beans.ProjetoFuncionario;
-import br.com.projectjpa.conversores.ConverterFuncionario;
-import br.com.projectjpa.conversores.ConverterSetor;
-import br.com.projectjpa.model.FuncionarioDAO;
-import br.com.projectjpa.model.ProjetoDAO;
-import br.com.projectjpa.model.SetorDAO;
+import br.com.controlprojetos.beans.Funcionario;
+import br.com.controlprojetos.beans.Projeto;
+import br.com.controlprojetos.beans.ProjetoFuncionario;
+import br.com.controlprojetos.conversores.ConverterFuncionario;
+import br.com.controlprojetos.conversores.ConverterSetor;
+import br.com.controlprojetos.model.FuncionarioDAO;
+import br.com.controlprojetos.model.ProjetoDAO;
+import br.com.controlprojetos.model.SetorDAO;
 
 
 @ManagedBean(name="controleProjeto")

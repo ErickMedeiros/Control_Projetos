@@ -1,4 +1,4 @@
-package br.com.controlprojetos.modelos;
+package br.com.controlprojetos.model;
 
 import java.util.List;
 

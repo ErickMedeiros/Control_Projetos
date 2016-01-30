@@ -4,11 +4,11 @@ import java.util.Calendar;
 
 import javax.persistence.EntityManager;
 
-import br.com.projectjpa.beans.Funcionario;
-import br.com.projectjpa.beans.Projeto;
-import br.com.projectjpa.beans.ProjetoFuncionario;
-import br.com.projectjpa.beans.Setor;
-import br.com.projectjpa.jpa.EntityManagerUtil;
+import br.com.controlprojetos.beans.Funcionario;
+import br.com.controlprojetos.beans.Projeto;
+import br.com.controlprojetos.beans.ProjetoFuncionario;
+import br.com.controlprojetos.beans.Setor;
+import br.com.controlprojetos.jpa.EntityManagerUtil;
 
 
 public class TesteInserirProjeto {

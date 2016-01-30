@@ -6,7 +6,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 
-import br.com.controlprojetos.beans.Grupo;
+
 import br.com.controlprojetos.beans.Setor;
 import br.com.controlprojetos.jpa.EntityManagerUtil;
 

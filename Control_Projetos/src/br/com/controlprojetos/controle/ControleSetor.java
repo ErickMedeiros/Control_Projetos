@@ -6,8 +6,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 
-import br.com.projectjpa.beans.Setor;
-import br.com.projectjpa.model.SetorDAO;
+import br.com.controlprojetos.beans.Setor;
+import br.com.controlprojetos.model.SetorDAO;
 
 
 @ManagedBean(name="controleSetor")

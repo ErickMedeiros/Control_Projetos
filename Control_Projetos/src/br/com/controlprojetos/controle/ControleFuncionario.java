@@ -14,9 +14,9 @@ import org.primefaces.model.StreamedContent;
 import br.com.controlprojetos.beans.Funcionario;
 import br.com.controlprojetos.conversores.ConverterGrupo;
 import br.com.controlprojetos.conversores.ConverterSetor;
-import br.com.controlprojetos.modelo.FuncionarioDAO;
-import br.com.controlprojetos.modelo.GrupoDAO;
-import br.com.controlprojetos.modelo.SetorDAO;
+import br.com.controlprojetos.model.FuncionarioDAO;
+import br.com.controlprojetos.model.GrupoDAO;
+import br.com.controlprojetos.model.SetorDAO;
 import br.com.controlprojetos.util.UtilErros;
 import br.com.controlprojetos.util.UtilMensagens;
 

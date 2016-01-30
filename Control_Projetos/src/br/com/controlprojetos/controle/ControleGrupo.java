@@ -5,8 +5,8 @@ import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import br.com.projectjpa.beans.Grupo;
-import br.com.projectjpa.model.GrupoDAO;
+import br.com.controlprojetos.beans.Grupo;
+import br.com.controlprojetos.model.GrupoDAO;
 
 
 @ManagedBean(name="controleGrupo")
